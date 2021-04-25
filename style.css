@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 62.5%; /* 10px */
+    --fakewhite: rgb(224, 224, 224);
+    --lightdark: #4e4e4e;
+    --strongdark: #100F10;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/*NavBar*/
+nav {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #100F10;
+    min-height: 8vh;
+    color: white;
+    font-family: 'Popins', sans-serif;
+}
+.logo {
+    color: var(--fakewhite);
+    letter-spacing: 5px;
+    font-size: 2rem;
+}
+.logo a{
+    text-decoration: none;
+    color: var(--fakewhite);
+}
+.nav-links {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: var(--fakewhite);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.nav-links a:hover, .logo a:hover {
+    background-color: var(--lightdark);
+    border-radius: 25%;
+}
+.burger{
+    display:none;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: var(--fakewhite);
+    margin: 5px;
+    transition: all 0.3 ease;
+}
+
+/*Mobile nav*/
+@media screen and (max-width:768px){
+    body {
+        overflow-x:hidden;
+    }
+    .nav-links {
+        position:absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--strongdark);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+        color: var(--fakewhite);
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .nav-links div:hover{
+        background-color: var(--lightdark);
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+        margin-left:200px;
+    }
+}
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
