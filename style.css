@@ -6,6 +6,7 @@
     font-size: 62.5%; /* 10px */
     --fakewhite: rgb(224, 224, 224);
     --lightdark: #4e4e4e;
+    --halfdark: #1B1B1B;
     --strongdark: #100F10;
 }
 *{
@@ -14,6 +15,9 @@
     box-sizing: border-box;
 }
 /*NavBar*/
+body{
+    background-color: var(--lightdark);
+}
 nav {
     display:flex;
     justify-content: center;
@@ -22,6 +26,8 @@ nav {
     min-height: 8vh;
     color: white;
     font-family: 'Popins', sans-serif;
+    position: sticky;
+    top: 0;
 }
 .logo {
     color: var(--fakewhite);
@@ -48,7 +54,16 @@ nav {
     font-weight: bold;
     font-size: 1.4rem;
 }
+/*
 .nav-links a:hover, .logo a:hover {
+    background-color: var(--lightdark);
+    border-radius: 25%;
+}
+*/
+.nav-links li:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
     background-color: var(--lightdark);
     border-radius: 25%;
 }
@@ -116,4 +131,9 @@ nav {
 }
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+main {
+    max-width: 1200px;
+    background-color: var(--strongdark);
+    margin: 0 auto;
 }
