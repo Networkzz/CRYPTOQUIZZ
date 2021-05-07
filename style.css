@@ -129,6 +129,7 @@ nav {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+/*Main + index*/
 main {
     max-width: 1200px;
     background-color: var(--strongdark);
@@ -149,13 +150,14 @@ main a {
     color: #58A6ff;
 }
 .index-image {
-    width: 800px;
-    height: 600px;
+    width: 80rem;
+    height: 60rem;
     background-size: cover;
-    border-radius: 10%;
+    border: solid white 2px;
     background-image: url(images/index-image.jpg);
     margin: 0 auto;
 }
+/*Footer*/
 footer {
     width: 100%;
     height: 100%;
@@ -175,11 +177,12 @@ footer p {
     text-align: center;
     font-size: 2rem;
 }
+/*Info*/
 .info-img {
-    width: 800px;
-    height: 534px;
+    width: 80rem;
+    height: 53.4rem;
     background-size: cover;
-    border-radius: 10%;
+    border: solid white 2px;
     background-image: url(images/info-img.jpg);
     margin: 0 auto;
 }
