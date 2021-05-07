@@ -155,7 +155,7 @@ main a {
     height: 60rem;
     background-size: cover;
     border: solid white 2px;
-    background-image: url(images/index-image.jpg);
+    background-image: url(/images/index-image.jpg);
     margin: 0 auto;
 }
 /*Footer*/
@@ -184,7 +184,7 @@ footer p {
     height: 53.4rem;
     background-size: cover;
     border: solid white 2px;
-    background-image: url(images/info-img.jpg);
+    background-image: url(/images/info-img.jpg);
     margin: 0 auto;
 }
 /*Quiz*/
