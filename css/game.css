@@ -1,6 +1,9 @@
 body {
     color: #fff;
 }
+.container-quiz {
+    height: 100%;
+}
 .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
