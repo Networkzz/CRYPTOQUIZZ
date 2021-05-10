@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitcoin</title>
+    <title>Blockchain Quiz</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/game.css">
     <script src="https://kit.fontawesome.com/7850baa297.js" crossorigin="anonymous"></script>
@@ -28,10 +28,42 @@
         </div>
     </nav>
     <div class="container-quiz">
-        <div id="home" class="flex-column2 flex-center2">
-            <h1>¿Estás preparado?</h1>
-            <a href="/html+quizs/game.html" class="btn">Jugar</a>
-            <a href="/html+quizs/highscore.html" id="highscore-btn" class="btn">Mejores puntuaciones<i class="fas fa-crown"></i></a>
+        <div id="game" class="justify-center flex-column">
+            <div id="hud">
+                <div class="hud-item">
+                    <p id="progressText" class="hud-prefix">
+                        Pregunta
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Puntuación
+                    </p>
+                    <h1 class="hud-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <h1 id="question">Que respuesta tiene esta pregunta</h1>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1">Opcion 1</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2">Opcion 2</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3">Opcion 3</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4">Opcion 4</p>
+            </div>
         </div>
     </div>
     <footer>
@@ -44,6 +76,6 @@
             <a href="mailto:alex.cinco99@gmail.com" target="_blank"><i class="far fa-envelope fa-3x"></i></a>
         </div>
     </footer>
-    <script src="/scripts/script.js"></script>
+    <script src="/scripts/game2.js"></script>
 </body>
 </html>

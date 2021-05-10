@@ -140,6 +140,10 @@ main {
     -webkit-box-shadow: 4px 10px 25px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 10px 25px 1px rgba(0,0,0,0.75);
     box-shadow: 4px 10px 25px 1px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 main p {
     font-size: 1.5rem;
@@ -157,6 +161,37 @@ main a {
     border: solid white 2px;
     background-image: url(/images/index-image.jpg);
     margin: 0 auto;
+}
+.section-1,.section-2,.section-3,.section-4,.section-5,.section-6 {
+    -webkit-box-shadow: 4px 10px 25px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 10px 25px 1px rgba(0,0,0,0.75);
+    box-shadow: 4px 10px 25px 1px rgba(0,0,0,0.75);
+    border: 1px solid #fff;
+    z-index: 1000;
+}
+.section-1 {
+    width: 100rem;
+    height: 8.5rem;
+}
+.section-2 {
+    width: 55rem;
+    height: 10rem;
+}
+.section-3 {
+    width: 80rem;
+    height: 7rem;
+}
+.section-4 {
+    width: 100rem;
+    height: 7rem;
+}
+.section-5 {
+    width: 100rem;
+    height: 5rem;
+}
+.section-6 {
+    width: 35rem;
+    height: 6.2rem;
 }
 /*Footer*/
 footer {
@@ -207,6 +242,7 @@ footer p {
     font-size: 5rem;
     color: #fff;
     margin-bottom: 5rem;
+    text-align: center;
 }
 .container-quiz h2 {
     font-size: 4.2rem;
@@ -215,6 +251,12 @@ footer p {
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+.flex-column2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .flex.center {
     justify-content: center;
@@ -239,7 +281,6 @@ footer p {
     color: rgb(28,26,26);
     background: linear-gradient(90deg,rgb(18,92,255)0%, rgb(0,102,255)100%);
     border-radius: 4px;
-    margin-left: 6.65rem;
 }
 .btn:hover {
     cursor: pointer;
@@ -267,4 +308,42 @@ footer p {
 }
 .incorrect {
     background-color: linear-gradient(32deg,rgba(230,29,29,1)0%, rgb(224,11,11,1)100%);
+}
+/*Final cuestionario*/
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input{
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+input::placeholder {
+    color: #aaa;
+}
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+#end-text {
+    font-size: 2.4rem;
+    color: #fff;
+    text-align: center;
+}
+#saveScoreBtn {
+    border: none;
+}
+.fa-home {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: rbg(28, 26, 26);
 }
