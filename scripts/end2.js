@@ -1,3 +1,6 @@
+/**
+ * @author Alejandro Martin @networkzz <https://github.com/Networkzz/>
+ */
 const username = document.querySelector('#username2')
 const saveScoreBtn = document.querySelector('#saveScoreBtn2')
 const finalScore = document.querySelector('#finalScore2')
@@ -8,11 +11,15 @@ const highScores = JSON.parse(localStorage.getItem('highScores2')) || []
 const MAX_HIGH_SCORES = 5
 
 finalScore.innerText = mostRecentScore
-
+/** @function saveUsername
+ * Bloquea el guardar puntuacion si el usuario no tiene un nombre introducido
+ */
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value
 })
-
+/** @function saveHighscore
+ * Almacena en las mejores puntuaciones (si es posible) la ultima puntuacion realizada
+ */
 saveHighScore = e => {
     e.preventDefault()
 
@@ -22,7 +29,9 @@ saveHighScore = e => {
     }
 
     highScores.push(score)
-
+/** @function sortHighscore
+ * Ordena el array de las mejores puntuaciones de mejor a peor
+ */
     highScores.sort((a,b) => {
         return b.score - a.score
     })

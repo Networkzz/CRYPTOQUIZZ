@@ -309,7 +309,7 @@ footer p {
 .incorrect {
     background-color: linear-gradient(32deg,rgba(230,29,29,1)0%, rgb(224,11,11,1)100%);
 }
-/*Final cuestionario*/
+/*Final quiz*/
 .end-form-container {
     width: 100%;
     display: flex;

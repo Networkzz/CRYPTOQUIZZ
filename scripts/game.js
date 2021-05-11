@@ -1,3 +1,7 @@
+
+/**
+ * @author Alejandro Martin @networkzz <https://github.com/Networkzz/>
+ */
 const question = document.querySelector("#question");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
 const progressText = document.querySelector("#progressText");
@@ -93,16 +97,22 @@ let questions = [
   },
 ];
 
-const SCORE_POINTS = 10
+const SCORE_POINTS = 100
 const MAX_QUESTIONS = questions.length
-
+/** @function startGame
+ * Inicializa el cuestionario
+ */
 startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
     getNewQuestion()
 }
-
+/** @function getNewQuestion
+ * Siempre y cuando no sea la ultima pregunta, muestra nuevas preguntas, finalmente
+ * envia a la parte final del cuestionario.
+ * Incrementa el contador de las preguntas y muestra 0 / 10 preguntas junto a una barra de progreso.
+ */
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
@@ -117,7 +127,10 @@ getNewQuestion = () => {
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
-
+/** @function choiceForEach
+ * Recorre el array y vincula el data-set de HTML con la variable number
+ * Utiliza el metodo splice para añadir/eliminar elementos del array
+ */
     choices.forEach(choice => {
         const number = choice.dataset['number']
         choice.innerText = currentQuestion['choice' + number]
@@ -127,7 +140,11 @@ getNewQuestion = () => {
 
     acceptingAnswers = true
 }
-
+/** @function choiceForEach
+ * Crea el evento onclick para comprobar si la respuesta es correcta/incorrecta
+ * Si es correcta aplica el estilo de style.css "correct" si es incorrecta "incorrect" *NO FUNCIONA*
+ * Si la respuesta es correcta incrementa con la variable SCORE_POINTS (+100) al contador de puntos *NO FUNCIONA*
+ */
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
@@ -143,7 +160,9 @@ choices.forEach(choice => {
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
-
+/** @function setTimeout
+ * Elimina el estilo aplicado una vez pase a la siguiente pregunta
+ */
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
@@ -151,10 +170,14 @@ choices.forEach(choice => {
         }, 1000)
     })
 })
-
+/** @function incrementScore
+ * Aumenta en el contador la puntuacion del usuario
+ */
 incrementScore = num => {
     score +=num
     scoreText.innerText = score
 }
-
+/** @function startGame
+ * Inicializa el quiz
+ */
 startGame()
