@@ -20,7 +20,7 @@ let questions = [
     choice2: "Es una moneda virtual como el euro, pero online",
     choice3: "Es un protocolo, proyecto de código privado y red entre iguales que se utiliza como criptomoneda, sistema de pago y mercancía",
     choice4: "Es un protocolo, proyecto de código abierto y red entre iguales que se utiliza como criptomoneda, sistema de pago y mercancía.",
-    answer: "Es un protocolo, proyecto de código abierto y red entre iguales que se utiliza como criptomoneda, sistema de pago y mercancía.",
+    answer: 3,
   },
   {
     question: "¿Quién creo el Bitcoin?",
@@ -28,7 +28,7 @@ let questions = [
     choice2: "Vitalik Buterin",
     choice3: "Elon Musk",
     choice4: "Billy Markus",
-    answer: "Satoshi Nakamoto",
+    answer: 1,
   },
   {
     question: " ¿Cuándo se creó el Bitcoin?",
@@ -36,7 +36,7 @@ let questions = [
     choice2: "2010",
     choice3: "2011",
     choice4: "2008",
-    answer: "2008",
+    answer: 4,
   },
   {
     question: "¿Cuál es la moneda que se especula que superara al Bitcoin?",
@@ -44,7 +44,7 @@ let questions = [
     choice2: "Etherum",
     choice3: "XRP",
     choice4: "Maker",
-    answer: "Etherum",
+    answer: 2,
   },
   {
     question: "¿Se puede comprar con Bitcoin en el supermercado?",
@@ -52,7 +52,7 @@ let questions = [
     choice2:"No",
     choice3:"Cuando la ley de transmisión de datos se apruebe",
     choice4:"Cuando el bitcoin alcance al millón",
-    answer:"No",
+    answer: 2,
   },
   {
     question: "¿Cuál es la moneda que mas % ha subido en 2021?",
@@ -60,7 +60,7 @@ let questions = [
     choice2:"Etherum",
     choice3:"DogeCoin",
     choice4:"Shiba",
-    answer:"DogeCoin",
+    answer: 3,
   },
   {
     question: "¿Cómo se identifica una transacción de Bitcoin?",
@@ -68,7 +68,7 @@ let questions = [
     choice2: "Codigo binario",
     choice3: " Algoritmo de números primos",
     choice4: "Codigo morse",
-    answer: "SHA-256",
+    answer: 1,
   },
   {
     question: "¿Dónde se almacenan los Bitcoins?",
@@ -76,7 +76,7 @@ let questions = [
     choice2: "En una cartera física o en el banco",
     choice3: "En el banco",
     choice4: "En un Exchange o banco",
-    answer: "En un Exchange o cartera virtual",
+    answer: 1,
   },
   {
     question: "¿Dónde comprar Bitcoins?",
@@ -84,7 +84,7 @@ let questions = [
     choice2: "En el banco",
     choice3: "En la Deep web",
     choice4: "En la W3C",
-    answer: "En un Exchange",
+    answer: 1,
   },
   {
     question: "¿Qué tiene más futuro?",
@@ -92,7 +92,7 @@ let questions = [
     choice2: "Euro",
     choice3: "Dolar",
     choice4: "Bitcoin",
-    answer: "Bitcoin",
+    answer: 4,
   },
 ];
 
@@ -116,7 +116,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/html+quizs/end.html')
+        return window.location.assign('/html+quizs/end3.html')
     }
 
     questionCounter++
@@ -141,8 +141,8 @@ getNewQuestion = () => {
 }
 /** @function choiceForEach
  * Crea el evento onclick para comprobar si la respuesta es correcta/incorrecta
- * Si es correcta aplica el estilo de style.css "correct" si es incorrecta "incorrect" *NO FUNCIONA*
- * Si la respuesta es correcta incrementa con la variable SCORE_POINTS (+100) al contador de puntos *NO FUNCIONA*
+ * Si es correcta aplica el estilo de style.css "correct" si es incorrecta "incorrect" 
+ * Si la respuesta es correcta incrementa con la variable SCORE_POINTS (+100) al contador de puntos 
  */
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
@@ -156,6 +156,7 @@ choices.forEach(choice => {
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
+            //document.querySelector(".choice-container").style.background = "linear-gradient(32deg,rgba(11,223,36)0%, rgb(41,232,111)100%)"
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
@@ -170,7 +171,7 @@ choices.forEach(choice => {
     })
 })
 /** @function incrementScore
- * Aumenta en el contador la puntuacion del usuario
+ * Aumenta el contador la puntuacion del usuario
  */
 incrementScore = num => {
     score +=num

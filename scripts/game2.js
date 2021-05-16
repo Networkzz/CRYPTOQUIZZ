@@ -20,7 +20,7 @@ let questions = [
     choice2: "Es un medio digital de intercambio de euros que utiliza criptografía fuerte para asegurar las transacciones, controlar la creación de unidades adicionales y verificar la transferencia de activos usando tecnologías de registro distribuido.",
     choice3: "Es un medio digital de intercambio que utiliza criptografía fuerte para asegurar las transacciones,controlar la creación de unidades adicionales y verificar la transferencia de activos usando tecnologías de registro distribuido",
     choice4: "Es un medio digital de intercambio que utiliza criptografía fuerte para hackear las transacciones,controlar la creación de unidades adicionales y verificar la transferencia de activos usando tecnologías de registro distribuido",
-    answer: "Es un medio digital de intercambio que utiliza criptografía fuerte para asegurar las transacciones,controlar la creación de unidades adicionales y verificar la transferencia de activos usando tecnologías de registro distribuido",
+    answer: 3,
   },
   {
     question:  "¿Cuál es la criptomoneda más importante?",
@@ -28,7 +28,7 @@ let questions = [
     choice2: "Etherum",
     choice3: "DogeCoin",
     choice4: "Cardano",
-    answer: "Bitcoin",
+    answer: 1,
   },
   {
     question: "¿Qué beneficios aportan las criptomonedas?",
@@ -36,7 +36,7 @@ let questions = [
     choice2: "Mucho dinero ya que no paran de subir en el mercado",
     choice3: "Utilizar monedas digitales en vez de euros",
     choice4: "Aumenta el coste de transacción ya que hay intermediario, ampliación del tiempo de transacción y agregación de usar agentes financieros.",
-    answer: "Reduce el coste de transacción ya que no hay intermediario, reducción de tiempo de transacción y eliminación de usar agentes financieros.",
+    answer: 1,
   },
   {
     question: "¿Qué tecnología hay detrás de las criptomonedas?",
@@ -44,7 +44,7 @@ let questions = [
     choice2: "Blockchain",
     choice3: "Python",
     choice4: "Algoritmo de números primos",
-    answer: "Blockchain",
+    answer: 2,
   },
   {
     question: "¿En qué algoritmo se basa principalmente?",
@@ -52,7 +52,7 @@ let questions = [
     choice2:"Algoritmo de Fibonacci mediante recursividad.",
     choice3:"Algoritmo de SHA-256 y scrypt.",
     choice4:"Algoritmo de números primos y que sean múltiplos de 2^256.",
-    answer:"Algoritmo de SHA-256 y scrypt.",
+    answer: 3,
   },
   {
     question: "¿Qué es el minado de criptomonedas?",
@@ -60,7 +60,7 @@ let questions = [
     choice2:" La misión de la minería es básicamente permitir a las personas crear bitcoins falsos y así manipular el mercado fácilmente. Así, los mineros revisan las transacciones y juntan las últimas transacciones creadas en un grupo llamado bloque. Tras resolver esto reciben criptomonedas como recompensa.",
     choice3:"Coger un pico y minar bitcoins.",
     choice4:" La misión de la minería es básicamente certificar que nadie usa las monedas dos veces y que nadie pueda introducir en el mercado bitcoins falsos. Así, los mineros revisan las transacciones y juntan las últimas transacciones creadas en un grupo llamado bloque. Tras resolver esto reciben criptomonedas como recompensa",
-    answer:" La misión de la minería es básicamente certificar que nadie usa las monedas dos veces y que nadie pueda introducir en el mercado bitcoins falsos. Así, los mineros revisan las transacciones y juntan las últimas transacciones creadas en un grupo llamado bloque. Tras resolver esto reciben criptomonedas como recompensa",
+    answer: 4,
   },
   {
     question: "¿Cuándo apareció la primera criptomoneda?",
@@ -68,7 +68,7 @@ let questions = [
     choice2: "2010",
     choice3: "2011",
     choice4: "2008",
-    answer: "2009",
+    answer: 1,
   },
   {
     question: "¿Quién creo el Bitcoin?",
@@ -76,7 +76,7 @@ let questions = [
     choice2: "Vitalik Buterin.",
     choice3: "Elon Musk",
     choice4: "Billy Markus",
-    answer: "Satoshi Nakamoto",
+    answer: 1,
   },
   {
     question: "¿Quién creo el Etherum",
@@ -84,7 +84,7 @@ let questions = [
     choice2: "Vitalik Buterin.",
     choice3: "Elon Musk.",
     choice4: "Billy Markus",
-    answer: "Vitalik Buterin.",
+    answer: 2,
   },
   {
     question: "¿Quién creo el DogeCoin?",
@@ -92,7 +92,7 @@ let questions = [
     choice2: "Vitalik Buterin",
     choice3: "Elon Musk.",
     choice4: "Billy Markus",
-    answer: "Billy Markus",
+    answer: 4,
   },
 ];
 
@@ -116,7 +116,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/html+quizs/end.html')
+        return window.location.assign('/html+quizs/end2.html')
     }
 
     questionCounter++
@@ -141,8 +141,8 @@ getNewQuestion = () => {
 }
 /** @function choiceForEach
  * Crea el evento onclick para comprobar si la respuesta es correcta/incorrecta
- * Si es correcta aplica el estilo de style.css "correct" si es incorrecta "incorrect" *NO FUNCIONA*
- * Si la respuesta es correcta incrementa con la variable SCORE_POINTS (+100) al contador de puntos *NO FUNCIONA*
+ * Si es correcta aplica el estilo de style.css "correct" si es incorrecta "incorrect" 
+ * Si la respuesta es correcta incrementa con la variable SCORE_POINTS (+100) al contador de puntos 
  */
 choices.forEach(choice => {
     choice.addEventListener('click', e => {

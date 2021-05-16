@@ -21,7 +21,7 @@ let questions = [
     choice2: "Es una estructura de Bitcoins cuya información se agrupa en conjuntos (bloques) a los que se le añade metainformaciones relativas a otro bloque de la cadena anterior en una línea temporal.",
     choice3: "Es una estructura de Etherum cuya información se agrupa en conjuntos (bloques) a los que se le añade metainformaciones relativas a otro bloque de la cadena anterior en una línea temporal",
     choice4: "Es una estructura de datos cuya información que va separado (uni-bloque) a los que se le añade metainformaciones relativas a otro bloque de la cadena anterior en una línea temporal.",
-    answer: "Es una estructura de datos cuya información se agrupa en conjuntos (bloques) a los que se le añade metainformaciones relativas a otro bloque de la cadena anterior en una línea temporal.",
+    answer: 1,
   },
   {
     question: "¿En que se basa blockchain?",
@@ -29,7 +29,7 @@ let questions = [
     choice2: "En la criptografía asimétrica, funciones hash y en la implementación de ledger",
     choice3: "En la minería de criptomonedas y hash",
     choice4: "En la criptografía asimétrica, mineo de criptomonedas y Bitcoin",
-    answer: "En la criptografía asimétrica, funciones hash y en la implementación de ledger",
+    answer: 2,
   },
   {
     question: "¿Qué enfoques tiene el blockchain?",
@@ -37,7 +37,7 @@ let questions = [
     choice2: "Análisis de bloques de comportamiento, Python y utilizando JSON para comunicarse.",
     choice3: "Almacenamiento de datos, transmisión de datos y confirmación de datos.",
     choice4: "Almacenamiento de datos, transmisión de datos, Python y FrontEnd de HTML, CSS y JS.",
-    answer: "Almacenamiento de datos, transmisión de datos y confirmación de datos.",
+    answer: 3,
   },
   {
     question: "¿Dónde se utiliza blockchain?",
@@ -45,7 +45,7 @@ let questions = [
     choice2: "Para virtualizar tus posesiones",
     choice3: "Creación de criptomonedas, transacciones bancarias, contratación pública…",
     choice4: "No sirven para nada son un engaño de la sociedad moderna.",
-    answer: "Creación de criptomonedas, transacciones bancarias, contratación pública…",
+    answer: 3,
   },
   {
     question: "¿Cómo se clasifican los bloques?",
@@ -53,7 +53,7 @@ let questions = [
     choice2:"Depende del bloque tiene una función de acceso u otra de procesamiento.",
     choice3:"Según su acceso a los datos, administración y transmisión de los datos",
     choice4:"Según su acceso a los datos, permisos, combinaciones de acceso y permisos y según el modelo de cambio de estado",
-    answer:"Según su acceso a los datos, permisos, combinaciones de acceso y permisos y según el modelo de cambio de estado",
+    answer: 4,
   },
   {
     question: "¿Qué es una Sidechain o cadena lateral?",
@@ -61,7 +61,7 @@ let questions = [
     choice2:"Es una cadena de bloques que valida datos desde otras cadenas de bloques a la que se llama secundaria.",
     choice3:"Es una cadena de bloques que valida datos desde la misma cadena de bloques a la que se llama principal.",
     choice4:"Es una cadena de bloques que valida datos desde otra cadena de bloques a la que se llama principal.",
-    answer:"Es una cadena de bloques que valida datos desde otra cadena de bloques a la que se llama principal.",
+    answer: 4,
   },
   {
     question: "¿Qué ha conseguido blockchain?",
@@ -69,7 +69,7 @@ let questions = [
     choice2: "Descentralización y ganar mucho dinero porque el bitcoin era muy barato antes y ahora vale mucho",
     choice3: "Seguridad y un sistema descentralizado para cometer ilegalidades",
     choice4: "Descentralización para poder comprar en la Deep web drogas.",
-    answer: "Descentralización de los pagos electrónicos y una seguridad muy alta ante las transacciones omitiendo las transacciones dobles por completo.",
+    answer: 1,
   },
   {
     question: "¿Quién creo la tecnología blockchain?",
@@ -77,7 +77,7 @@ let questions = [
     choice2: "Vitalik Buterin",
     choice3: "Satoshi Nakamoto.",
     choice4: "Elon Musk",
-    answer: "Satoshi Nakamoto.",
+    answer: 3,
   },
   {
     question: "¿Cuándo se creó blockchain?",
@@ -85,15 +85,15 @@ let questions = [
     choice2: "2009",
     choice3: "2008",
     choice4: "2011",
-    answer: "2008",
+    answer: 3,
   },
   {
-    question: " ¿Quién es Satoshi Nakamoto?",
+    question: "¿Quién es Satoshi Nakamoto?",
     choice1: "Un ingeniero especializado en criptografía.",
     choice2: "Un matemático especializado en criptografía.",
     choice3: "No se sabe mucho de esta persona, es alguien bastante anónimo.",
     choice4: "Un hacker que creo blockchain para hackear.",
-    answer: "No se sabe mucho de esta persona, es alguien bastante anónimo.",
+    answer: 3,
   },
 ];
 
@@ -142,8 +142,8 @@ getNewQuestion = () => {
 }
 /** @function choiceForEach
  * Crea el evento onclick para comprobar si la respuesta es correcta/incorrecta
- * Si es correcta aplica el estilo de style.css "correct" si es incorrecta "incorrect" *NO FUNCIONA*
- * Si la respuesta es correcta incrementa con la variable SCORE_POINTS (+100) al contador de puntos *NO FUNCIONA*
+ * Si es correcta aplica el estilo de style.css "correct" si es incorrecta "incorrect" 
+ * Si la respuesta es correcta incrementa con la variable SCORE_POINTS (+100) al contador de puntos 
  */
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
