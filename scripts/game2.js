@@ -16,10 +16,10 @@ let availableQuestions = [];
 let questions = [
   {
     question: "¿Qué son las criptomonedas?",
-    choice1: "Es un medio físico de intercambio que utiliza criptografía fuerte para asegurar las transacciones, controlar la creación de unidades adicionales y verificar la transferencia de activos usando tecnologías de registro distribuido.",
-    choice2: "Es un medio digital de intercambio de euros que utiliza criptografía fuerte para asegurar las transacciones, controlar la creación de unidades adicionales y verificar la transferencia de activos usando tecnologías de registro distribuido.",
+    choice1: "Es un medio físico de intercambio que utiliza criptografía fuerte para asegurar las transacciones y asi timar al resto de personas",
+    choice2: "Es un medio digital de intercambio de euros.",
     choice3: "Es un medio digital de intercambio que utiliza criptografía fuerte para asegurar las transacciones,controlar la creación de unidades adicionales y verificar la transferencia de activos usando tecnologías de registro distribuido",
-    choice4: "Es un medio digital de intercambio que utiliza criptografía fuerte para hackear las transacciones,controlar la creación de unidades adicionales y verificar la transferencia de activos usando tecnologías de registro distribuido",
+    choice4: "Es un medio digital de intercambio que utiliza criptografía fuerte para hackear las transacciones.",
     answer: 3,
   },
   {
@@ -57,9 +57,9 @@ let questions = [
   {
     question: "¿Qué es el minado de criptomonedas?",
     choice1:"La misión de la minería es básicamente minear bloques de Etherum y recibir Etherum a cambio mediante tarjetas gráficas.",
-    choice2:" La misión de la minería es básicamente permitir a las personas crear bitcoins falsos y así manipular el mercado fácilmente. Así, los mineros revisan las transacciones y juntan las últimas transacciones creadas en un grupo llamado bloque. Tras resolver esto reciben criptomonedas como recompensa.",
+    choice2:"La misión de la minería es básicamente permitir a las personas crear bitcoins falsos y así manipular el mercado fácilmente.",
     choice3:"Coger un pico y minar bitcoins.",
-    choice4:" La misión de la minería es básicamente certificar que nadie usa las monedas dos veces y que nadie pueda introducir en el mercado bitcoins falsos. Así, los mineros revisan las transacciones y juntan las últimas transacciones creadas en un grupo llamado bloque. Tras resolver esto reciben criptomonedas como recompensa",
+    choice4:"La misión de la minería es básicamente certificar que nadie usa las monedas dos veces y que nadie pueda introducir en el mercado bitcoins falsos.",
     answer: 4,
   },
   {

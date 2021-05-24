@@ -65,7 +65,7 @@ let questions = [
   },
   {
     question: "¿Qué ha conseguido blockchain?",
-    choice1: "Descentralización de los pagos electrónicos y una seguridad muy alta ante las transacciones omitiendo as transacciones dobles por completo.",
+    choice1: "Descentralización de los pagos electrónicos y una seguridad muy alta ante las transacciones omitiendo las transacciones dobles por completo.",
     choice2: "Descentralización y ganar mucho dinero porque el bitcoin era muy barato antes y ahora vale mucho",
     choice3: "Seguridad y un sistema descentralizado para cometer ilegalidades",
     choice4: "Descentralización para poder comprar en la Deep web drogas.",
