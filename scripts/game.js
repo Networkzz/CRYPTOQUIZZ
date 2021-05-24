@@ -17,10 +17,10 @@ let availableQuestions = [];
 let questions = [
   {
     question: "¿Qué es blockchain?",
-    choice1: "Es una estructura de datos cuya información se agrupa en conjuntos (bloques) a los que se le añade metainformaciones relativas a otro bloque de la cadena anterior en una línea temporal.",
-    choice2: "Es una estructura de Bitcoins cuya información se agrupa en conjuntos (bloques) a los que se le añade metainformaciones relativas a otro bloque de la cadena anterior en una línea temporal.",
-    choice3: "Es una estructura de Etherum cuya información se agrupa en conjuntos (bloques) a los que se le añade metainformaciones relativas a otro bloque de la cadena anterior en una línea temporal",
-    choice4: "Es una estructura de datos cuya información que va separado (uni-bloque) a los que se le añade metainformaciones relativas a otro bloque de la cadena anterior en una línea temporal.",
+    choice1: "Es una estructura de datos cuya información se agrupa en conjuntos (bloques).",
+    choice2: "Es una estructura de Bitcoins cuya información se agrupa en conjuntos (bloques).",
+    choice3: "Es una estructura de Etherum cuya información se agrupa en conjuntos (bloques).",
+    choice4: "Es una estructura de datos cuya información que va separado (uni-bloque).",
     answer: 1,
   },
   {
