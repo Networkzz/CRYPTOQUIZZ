@@ -48,6 +48,7 @@ nav {
 }
 .nav-links li{
     list-style: none;
+    animation: navLinkFade 1s normal forwards ease-in-out;
 }
 .nav-links a{
     color: var(--fakewhite);
@@ -56,12 +57,6 @@ nav {
     font-weight: bold;
     font-size: 1.4rem;
 }
-/*
-.nav-links a:hover, .logo a:hover {
-    background-color: var(--lightdark);
-    border-radius: 25%;
-}
-*/
 .nav-links a:hover {
     color: orange;
 }
@@ -100,6 +95,7 @@ nav {
     }
     .nav-links li{
         opacity: 1;
+        animation: navLinkFade 2s normal forwards ease-in-out;
     }
     .nav-links div:hover{
         background-color: var(--lightdark);
